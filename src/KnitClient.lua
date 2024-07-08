@@ -372,7 +372,7 @@ function KnitClient.Start(options: KnitOptions?)
 		table.insert(sortedControllers, controller)
 	end
 	table.sort(sortedControllers, function(c1, c2)
-		return (c1.LoadOrder or 0) < (c2.LoadOrder or 0)
+		return (c1.LoadOrder or math.huge) < (c2.LoadOrder or math.huge)
 	end)
 
 	return Promise.new(function(resolve)

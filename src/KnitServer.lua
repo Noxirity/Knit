@@ -415,7 +415,7 @@ function KnitServer.Start(options: KnitOptions?)
 		table.insert(sortedServices, service)
 	end
 	table.sort(sortedServices, function(s1, s2)
-		return (s1.LoadOrder or 0) < (s2.LoadOrder or 0)
+		return (s1.LoadOrder or math.huge) < (s2.LoadOrder or math.huge)
 	end)
 
 	return Promise.new(function(resolve)

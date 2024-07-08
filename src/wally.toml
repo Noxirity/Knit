@@ -1,10 +1,11 @@
 [package]
-name = "sleitnick/knit"
+name = "noxirity/knit"
 description = "Knit is a lightweight game framework"
 version = "1.7.0"
 license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
+authors = ["Sleitnick"]
 
 [dependencies]
 Comm = "sleitnick/comm@^1"
